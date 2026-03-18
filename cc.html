@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineSearch — Movie Finder</title>
+    <link rel="stylesheet" href="cc.css">
+    <link rel="stylesheet" href="cc2.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header_container">
+            <div class="name">CineSearch</div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="primary_filter" id="primaryFilter">
+                <div id="te">TollyWood</div>
+                <div id="ml">MollyWood</div>
+                <div id="en">HollyWood</div>
+                <div id="hi">BollyWood</div>
+                <div class="language">
+                    <select name="lang_select" id="lang_select">
+                        <option disabled selected hidden>Language</option>
+                        <option value="none">None</option>
+                        <option id="ta">Tamil</option>
+                        <option id="kn">Kannada</option>
+                        <option id="es">Spanish</option>
+                        <option id="ko">Korean</option>
+                        <option id="ja">Japanese</option>
+                        <option id="fr">French</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <!-- 16 unique posters × 2 = 32 total, guarantees no gap on any screen -->
+            <div class="hero_background">
+                <img src="https://image.tmdb.org/t/p/w342/okq2Q1f2alXGWQMLsCi4wXoAXt4.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/cily2czYaIla7RoPQc8L1KO948e.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/kHubDgL59I5hCn7ccBYvU7bKY1r.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/8d8TTADw3p75Zr4ypNWD66oqUXI.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/sojEzvfxR2DBcDSJyAisX8TWjov.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/1XS6a06xS2v0E2WRVKP16VhDTho.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/gEU2QniE6E77NI6lCU6MxlNBvIe.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/xmbU4JTUm8rsdtn7Y3Fcm30GpeT.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/6OEBp0Gqv6DsOgi8diPUslT2kbA.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/iuFNMS8vlbByA1wV0RYDH0rBZkA.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/9l1eZiJHmhr5jIlthMdJN5WYoff.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/h8Rb9gBr48ODIwYUttZNYeMWeUU.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/wqnLdwVXoBjsjmAY0iGhRCEKEJd.jpg" alt="">
+                <!-- Exact duplicate set for seamless loop -->
+                <img src="https://image.tmdb.org/t/p/w342/okq2Q1f2alXGWQMLsCi4wXoAXt4.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/cily2czYaIla7RoPQc8L1KO948e.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/kHubDgL59I5hCn7ccBYvU7bKY1r.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/8d8TTADw3p75Zr4ypNWD66oqUXI.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/sojEzvfxR2DBcDSJyAisX8TWjov.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/1XS6a06xS2v0E2WRVKP16VhDTho.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/gEU2QniE6E77NI6lCU6MxlNBvIe.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/xmbU4JTUm8rsdtn7Y3Fcm30GpeT.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/6OEBp0Gqv6DsOgi8diPUslT2kbA.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/iuFNMS8vlbByA1wV0RYDH0rBZkA.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/9l1eZiJHmhr5jIlthMdJN5WYoff.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/h8Rb9gBr48ODIwYUttZNYeMWeUU.jpg" alt="">
+                <img src="https://image.tmdb.org/t/p/w342/wqnLdwVXoBjsjmAY0iGhRCEKEJd.jpg" alt="">
+            </div>
+            <div class="search">
+                <input id="search_box" type="text" placeholder="Search movies, TV shows, web series…">
+                <button id="search_button">Search</button>
+            </div>
+        </section>
+
+        <section class="secondary_filter">
+            <span class="filter-label">Filters</span>
+            <div class="filter-scroll">
+                <div class="year_select dropdown">
+                    <select name="year_select" id="year_select">
+                        <option disabled selected hidden>Year</option>
+                        <option value="none">None</option>
+                        <option value="2026">2026</option>
+                        <option value="2025">2025</option>
+                    </select>
+                </div>
+                <div class="genre_select dropdown">
+                    <select name="genre_select" id="genre_select">
+                        <option disabled selected hidden>Genre</option>
+                        <option value="none">None</option>
+                        <option value="Action">Action</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Animation">Animation</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Crime">Crime</option>
+                        <option value="Documentary">Documentary</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Family">Family</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="History">History</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Music">Music</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Sci_fi">Science Fiction</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="War">War</option>
+                        <option value="Western">Western</option>
+                    </select>
+                </div>
+                <div class="movies_select selected">Movies</div>
+                <div class="web-series_select">Web Series</div>
+                <div class="sort-by dropdown">
+                    <select name="sorting_select" id="sorting_select">
+                        <option disabled selected hidden>Sort by</option>
+                        <option value="none">None</option>
+                        <option value="vote_average.desc">Top Rated</option>
+                        <option value="release_date.desc">Latest</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Recommendations Section (shown after user activity) ── -->
+        <section class="rec-section" id="recSection">
+            <div class="rec-header">
+                <h2 class="rec-heading">For You</h2>
+                <div class="rec-pulse" id="recPulse"></div>
+                <span class="rec-label" id="recLabel"></span>
+            </div>
+            <div class="rec-track" id="recTrack"></div>
+        </section>
+
+        <section class="Main">
+            <div class="movie_heading"><h2>Discover</h2></div>
+            <div class="page"></div>
+            <!-- Pagination built entirely by JS -->
+            <div class="pagination" id="pagination"></div>
+        </section>
+    </main>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="movieModal">
+        <div class="modal-card" id="modalCard">
+            <button class="modal-close" id="modalClose">&#x2715;</button>
+            <div class="modal-header">
+                <img class="modal-backdrop-img" id="modalBackdrop" src="" alt="">
+                <div class="modal-header-gradient"></div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-left">
+                    <img class="modal-poster-img" id="modalPoster" src="" alt="">
+                    <div class="modal-stream-section">
+                        <h4 class="modal-section-title">Where to Watch</h4>
+                        <div class="modal-streaming" id="modalStreaming">
+                            <p class="no-stream">Loading…</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-right">
+                    <div class="modal-title-row">
+                        <h2 class="modal-title" id="modalTitle"></h2>
+                        <span class="modal-rating" id="modalRating"></span>
+                    </div>
+                    <div class="modal-meta" id="modalMeta"></div>
+                    <div class="modal-genres" id="modalGenres"></div>
+                    <p class="modal-overview" id="modalOverview"></p>
+                    <div class="modal-cast-section">
+                        <h4 class="modal-section-title">Cast</h4>
+                        <div class="modal-cast" id="modalCast"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-loading" id="modalLoading">
+                <div class="modal-spinner"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="cc.js"></script>
+</body>
+</html>
